@@ -10,11 +10,7 @@ namespace urok_5.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult TimeManager(TimeManager obj)
-        {
-            return Content("Task: " + (String.IsNullOrEmpty(obj.Task) ? "Not provided" : obj.Task) + ", Time limit: " + (String.IsNullOrEmpty(obj.Time) ? "Not provided" : obj.Time));
-        }
+        [HttpGet("ShowInfo")]
         public IActionResult ShowInfo(TimeManager obj)
         {
             return Content("Task: " + (String.IsNullOrEmpty(obj.Task) ? "Not provided" : obj.Task) + ", Time limit: " + (String.IsNullOrEmpty(obj.Time) ? "Not provided" : obj.Time));
