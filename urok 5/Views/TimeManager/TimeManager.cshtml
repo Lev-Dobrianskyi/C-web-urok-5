@@ -1,0 +1,8 @@
+﻿@model urok_5.Models.TimeManager
+
+<form asp-controller="TimeManager" asp-action="TimeManager" method="post">
+    <input type="text" placeholder="Enter task name" asp-for="Task"/>]
+    <input type="text" placeholder="Enter your time limit" asp-for="Time" />
+    <br>
+    <button formaction="/TimeManager/ShowInfo" type="submit">Submit</button>
+</form>
